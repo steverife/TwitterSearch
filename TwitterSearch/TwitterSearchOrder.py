@@ -224,3 +224,11 @@ class TwitterSearchOrder(TwitterOrder):
             self.arguments.update({'until': '%s' % date.strftime('%Y-%m-%d')})
         else:
             raise TwitterSearchException(1007)
+
+    def set_filter_images(self):
+        """ Sets 'filter' parameter to filter images
+        include_entities must be true
+        """
+        self.arguments.update({'filter': 'images'})
+
+
